@@ -1,4 +1,4 @@
-Below is an example of this repo's structure is meant to take shape:
+Below is an example of how this repo's structure is meant to take shape:
 
 sa-qa-community-hub/
 ├── README.md                           # Hub overview, target sites, and collaboration rules
