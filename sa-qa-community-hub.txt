@@ -1,16 +1,43 @@
-Below is an example of how this repo's structure is meant to take shape:
-
 sa-qa-community-hub/
 ├── README.md                           # Hub overview, target sites, and collaboration rules
+├── .github/
+│   ├── ISSUE_TEMPLATE/                 # Standardized GitHub Issue forms (mirroring Jira tickets)
+│   │   ├── user-story.md               # Agile User Story template with Acceptance Criteria (Gherkin/BDD)
+│   │   ├── bug-report.md               # Defect reporting with severity, priority, & browser environment
+│   │   └── test-task.md                # Test execution / automation task ticket template
+│   └── workflows/                      # GitHub Actions CI/CD pipelines (Cross-Browser execution)
+│       ├── playwright-ci.yml           # Automated runs across Chromium, Firefox, & WebKit
+│       └── selenium-ci.yml             # Automated runs via Selenium Grid (Chrome, Edge, Firefox)
+├── requirements-and-strategy/          # Project-level Requirements, Scope, & Master Test Strategy
+│   ├── master-test-strategy.md         # Overall testing scope, test levels, & entry/exit criteria
+│   ├── browser-and-env-matrix.md       # Target browsers (Chrome, Firefox, Edge, Safari/WebKit) & viewports
+│   └── requirements-traceability.md    # Mapping business requirements -> User Stories -> Test Cases
 ├── templates/
-│   └── test-justification-adr.md       # Template for documenting "Why this stack & test design?"
+│   ├── requirements-and-user-stories.md# Template for reverse-engineering AUT features into User Stories
+│   ├── test-design-specification.md    # Test design doc (BVA, Equivalence Partitioning, Decision Tables)
+│   ├── test-plan-strategy.md           # Sandbox-specific scope, risk analysis, & browser coverage plan
+│   ├── test-justification-adr.md       # Architectural Decision Record: "Why this stack, language, & design?"
+│   └── jira-defect-lifecycle.md        # Guide for logging, linking, & tracking issues in Jira/GitHub
+├── issue-management-and-ci/            # Guides on connecting tests to Jira, Xray/Zephyr, & GitHub Actions
+│   ├── jira-traceability-guide.md      # Tagging tests with Story/Requirement IDs (e.g., @US-101)
+│   └── github-actions-reporting.md     # Publishing Allure/HTML cross-browser reports via GitHub Actions
 ├── challenges/
-│   └── weekly-sprints.md               # Weekly/Daily testing missions and focus areas
+│   └── weekly-sprints.md               # Weekly/Daily testing missions, sprint goals, and focus areas
 └── sandboxes/
     ├── 01-saucedemo/                   # E-commerce checkout & inventory workflows
+    │   ├── docs/                       # Sandbox-specific Requirements & Design Docs
+    │   │   ├── requirements-stories.md # Documented requirements & user stories for SauceDemo
+    │   │   ├── test-design-doc.md      # Test cases, boundary values, & data matrices
+    │   │   └── test-plan.md            # Scope, strategy, & target browsers for this sandbox
     │   ├── playwright-typescript/
     │   ├── selenium-java/
     │   └── selenium-csharp/
     ├── 02-practicesoftwaretesting/     # Toolshop w/ complex filters, APIs, & shadow DOM
+    │   └── docs/                       # Requirements, user stories, test plan, & design docs
     ├── 03-demoqa/                      # Complex UI widgets, alerts, frames, & dynamic elements
-    └── 04-orangehrm/                   # Enterprise CRUD, role-based access, & data tables
+    │   └── docs/                       # Requirements, user stories, test plan, & design docs
+    ├── 04-orangehrm/                   # Enterprise CRUD, role-based access, & data tables
+    │   └── docs/                       # Requirements, user stories, test plan, & design docs
+    ├── 05-ttacart/                     # E-commerce checkout & inventory workflows (similar to saucedemo)
+    │   └── docs/
+    └── 06-other-live-websites/         # Real-world websites where exploratory & automated testing apply
