@@ -1,0 +1,16 @@
+Below is an example of this repo's structure is meant to take shape:
+
+sa-qa-community-hub/
+├── README.md                           # Hub overview, target sites, and collaboration rules
+├── templates/
+│   └── test-justification-adr.md       # Template for documenting "Why this stack & test design?"
+├── challenges/
+│   └── weekly-sprints.md               # Weekly/Daily testing missions and focus areas
+└── sandboxes/
+    ├── 01-saucedemo/                   # E-commerce checkout & inventory workflows
+    │   ├── playwright-typescript/
+    │   ├── selenium-java/
+    │   └── selenium-csharp/
+    ├── 02-practicesoftwaretesting/     # Toolshop w/ complex filters, APIs, & shadow DOM
+    ├── 03-demoqa/                      # Complex UI widgets, alerts, frames, & dynamic elements
+    └── 04-orangehrm/                   # Enterprise CRUD, role-based access, & data tables
